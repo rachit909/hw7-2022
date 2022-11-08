@@ -10,8 +10,8 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function(){
 	console.log("Play Video");
 	video.play();
-	var currVol = document.getElementById("slider").value;
-	document.querySelector("#volume").innerHTML=volume+"%";
+	video.volume = document.querySelector("#slider").value / 100;
+	document.querySelector("#volume").textContent = volume + '%';
 });
 document.querySelector("#pause").addEventListener("click", function(){
 	console.log("Pause Video");
